@@ -1,0 +1,140 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "郵便番号検索",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"List Box": {
+					"type": "listbox",
+					"left": 21,
+					"top": 44,
+					"width": 460,
+					"height": 400,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.list",
+					"focusable": false,
+					"resizingMode": "legacy",
+					"columns": [
+						{
+							"header": {
+								"text": "郵便番号",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.zipcode",
+							"textFormat": "###-####",
+							"width": 80
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "都道府県"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.address1",
+							"width": 80
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "住所"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.address2+This:C1470.address3",
+							"width": 300
+						}
+					]
+				},
+				"Text": {
+					"type": "text",
+					"text": "郵便番号：",
+					"top": 12,
+					"left": 22,
+					"width": 70,
+					"height": 16
+				},
+				"Input 郵便番号": {
+					"type": "input",
+					"left": 98,
+					"top": 12,
+					"width": 160,
+					"height": 17,
+					"entryFilter": "!0&9###-####"
+				},
+				"Button 郵便番号検索": {
+					"type": "button",
+					"text": "検索",
+					"top": 9,
+					"left": 278,
+					"width": 52,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Enter]",
+					"focusable": false
+				}
+			}
+		}
+	],
+	"geometryStamp": 17,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}
