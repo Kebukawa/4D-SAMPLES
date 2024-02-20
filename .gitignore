@@ -14,7 +14,10 @@ Libraries/
 userPreferences.*/
 
 # Uncomment (remove the following # ) to ignore Trash
-# Project/Trash
+Project/Trash
+
+# for test
+__TEST__*
 
 # System files
 .DS_Store
